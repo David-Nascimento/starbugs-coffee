@@ -10,7 +10,7 @@ Contexto:
 Cenario: Acessar o catálogo
   Entao eu devo ver uma lista de cafés disponiveis
 
-  @temp
+
 Cenario: Iniciar a compra de um café
     E desejo comprar o seguinte produto:
       | name     | Expresso Gelado |
