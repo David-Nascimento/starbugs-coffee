@@ -9,3 +9,10 @@ Before do
   @popup = Popup.new
   @order = OrderPage.new
 end
+
+After do |scenario|
+  if scenario.failed?
+    screenshot = page.save_screenshot("logs/screenshots/#{scenario.__id__}.png")
+    attach(screenshot, "image/png", "Screenshot")
+  end
+end
